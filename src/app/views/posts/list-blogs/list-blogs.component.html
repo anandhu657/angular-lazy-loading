@@ -1,0 +1,10 @@
+<div class="container my-4">
+    <div class="card mb-3" *ngFor="let blog of blogs">
+        <div class="card-body">
+            <a>
+                <h5 class="card-title">{{blog.title}}</h5>
+            </a>
+            <p class="card-text">{{blog.description}}</p>
+        </div>
+    </div>
+</div>

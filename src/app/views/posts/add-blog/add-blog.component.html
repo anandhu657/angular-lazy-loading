@@ -1,0 +1,14 @@
+<div class="container my-5">
+    <form [formGroup]="blogForm" (ngSubmit)="onBlogSubmit()">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" placeholder="Title" formControlName="title">
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea type="text" class="form-control" id="description" placeholder="Description"
+                formControlName="description"></textarea>
+        </div>
+        <button class="w-100 btn btn-primary">Submit</button>
+    </form>
+</div>

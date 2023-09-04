@@ -50,6 +50,9 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "node_modules/ngx-toastr/toastr.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,5 +122,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "f401b4c3-90cb-4332-b482-5f00a00075b1"
   }
 }

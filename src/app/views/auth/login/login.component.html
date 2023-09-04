@@ -1,0 +1,25 @@
+<div class="my-5 container px-5 w-75">
+    <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+        <div class="mb-3">
+            <label for="foremail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="foremail" formControlName="email">
+            <div class="form-text"
+                *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.errors?.['required']">
+                Email is required
+            </div>
+            <div class="form-text" *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.errors?.['email']">
+                Invalid Email
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="forpassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="forpassword" formControlName="password">
+            <div class="form-text"
+                *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['required']">
+                Password is required
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary w-100 fw-bold" [disabled]="loginForm.invalid">Login</button>
+    </form>
+    <p class="mt-3 text-center">New to Oresu create account <a routerLink="/signup">signup</a></p>
+</div>
